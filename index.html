@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vel wild</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="intro">
+
+  <main class="main-intro">
+
+    <section class="authorization">
+      <div class="container">
+      <a class="authorization-logo">
+        <img src="images/icon.png" alt="" class="authorization-logo__pic">
+      </a>
+      <form action="" class="authorization-form">
+        <input type="text" class="authorization-form__input" placeholder="ЛОГИН"> <br>
+        <input type="text" class="authorization-form__input" placeholder="ПАРОЛЬ">
+        <div class="authorization-form__radio">
+          <input class="authorization-form__radio-box" type="checkbox" id="flexSwitchCheckChecked" checked>
+          <label class="authorization-form__radio-title" for="flexSwitchCheckChecked">запомнить меня</label>
+        </div>
+          <button class="authorization-form__enter" type="submit">Вход</button>
+        </form>
+        <a href="#!" class="authorization-link">METAPROFiLE.ru</a>
+        <a href="#!" class="authorization-info">Инфомация об этом приложении</a>
+      </div>
+    </section>
+    <div class="authorization-popup" style="display: none;">
+      <div class="authorization-popup__box">
+        <a class="authorization-popup__box-link" href="#!">
+          <img class="authorization-popup__box-close" src="images/svg/btn-close.svg" alt="">
+        </a>
+        <h5 class="authorization-popup__box-title">ПЕРВЫЙ ВХОД</h5>
+        <p class="authorization-popup__box-text">Вы авторизуетесь впервые, <br>
+          пожалуйста подтвердите <br>
+          и хорошо запомните пароль</p>
+          <a href="#!" class="authorization-popup__box-btn">ХОРОШО</a>
+        </div>
+      </div>
+      
+    </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

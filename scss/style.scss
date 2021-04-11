@@ -1,0 +1,428 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+@import "mixins";
+
+
+
+// PAGE INDEX.HTML START
+// authorization start 
+.authorization{
+    &-logo{
+        display: flex;
+        justify-content: center;
+    }
+    &-logo__pic{
+        width: 204px;
+        height: 204px;
+        margin-top: 50px;
+    }
+    &-form{
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    &-form__input{
+        background: #2D2C2E;
+        border-radius: 65px;
+        border: 2px solid transparent;
+        margin-bottom: 24px;
+        outline: none;
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 15px;
+        padding: 10px 15px 9px 15px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        width: 151px;
+    }
+    &-form__input::placeholder{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        line-height: 17px;
+        padding: 5px 15px 14px 15px;
+    }
+    &-form__radio{
+        margin-bottom: 34px;
+        &-box{
+            width: 53px;
+            margin-left: 10px;
+            background-position: right center;
+            border-radius: 65px;
+            transition: background-position .15s ease-in-out;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+            background-size: 22px 22px;  
+            height: 30px;
+            // margin-top: .25em;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 3px solid rgba(0,0,0,.25);
+            appearance: none;
+            color-adjust: exact;
+        }
+        &-box:active {
+            filter: brightness(90%);
+        }
+        &-box:focus {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+            background-size: 22px 22px;
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+        }
+        &-box:checked{
+            background-position: left center;
+            background-image: url('../images/svg/btn-on.svg');
+            border-color: #0047FF;
+            background-color: #0047FF;
+            background-size: 22px 22px;
+        }
+        &-title{
+            font-family: $roboto-font;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: $dark-blue-font-color;
+        }
+    }
+    &-form__enter{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: $font-black-color;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        border-radius: 65px;
+        background-color: #FFFFFF;
+        cursor: pointer;
+        width: 163px;
+        height: 40px;
+    }
+    &-popup{
+        &__box-title{
+            font-family: $roboto-font;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: $dark-blue-font-color;
+            margin-bottom: 60px;
+        }
+        &__box-text{
+            font-family: $roboto-font;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: center;
+            color: $font-black-color;
+            margin-bottom: 60px;
+        }
+        &__box-btn{            
+            font-family: $roboto-font;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: center;
+            color: $dark-blue-font-color;
+            background-color: #FFFFFF;
+            border: 2px solid $dark-blue-font-color;
+            box-sizing: border-box;
+            border-radius: 65px;
+            width: 107px;
+            height: 30px;
+            padding: 4px 20px 5px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    &-popup--active{
+        display: block !important;
+        animation: popup-animate .1s ease-in-out;
+        transition: transform .4s, -webkit-transform .4s;
+    }
+    &-popup__box{
+        width: 254px;
+        height: 285px;
+        padding: 18px 17px;
+        background: #FFFFFF;
+        border-radius: 30px;
+        position: absolute;
+        z-index: 22;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-53%);
+        &-link{
+            text-align: right;
+            display: block;
+            margin-bottom: 16px;
+        }
+        &-close{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &-info,
+    &-link{
+        display: block;
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: $dark-grey-color;
+    }
+    &-link{
+        text-decoration: underline;
+        margin-bottom: 7px;
+    }
+}
+// authorization end 
+// PAGE INDEX.HTML END
+
+// PAGE PAGE-TWO.HTML START
+// section search start 
+.search{
+    margin-bottom: 29px;
+    &-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-form__input{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #908E90;
+        background-color: transparent;
+        border: 2px solid #908E90;
+        border-radius: 37px;
+        margin: 20px 26px 20px 0;
+        width: 247px;
+        height: 25px;
+        outline: none;
+        padding-left: 10px;
+        &::placeholder{
+            font-family: $roboto-font;
+            font-weight: 500;
+            font-size: 15px;
+            color: #908E90;
+        }
+    }
+    &-results__item{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 13px;
+        color: #2E2C30;
+        background: $dark-grey-color;
+        height: 17px;
+        line-height: 17px;
+        padding-left: 20px;
+    }
+    &-results__list{
+        &-item{
+            padding-left: 20px;
+            height: 30px;
+            line-height: 22px;
+            border-bottom: 1px solid #6E6E70;
+        }
+        &-link{
+            font-family: $roboto-font;
+            font-weight: 500;
+            font-size: 15px;
+            color: #908E90;
+        }
+    }
+    &-form__btn{
+        outline: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        &-add{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+// section search end
+// section actions start
+.actions{
+    &-inner{
+        
+    }
+    &-link{
+        display: flex;
+        margin-bottom: 47px;
+    }
+    &-logo{
+        width: 117px;
+        height: 105px;
+        margin: 0 auto;
+    }
+    &-more{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 47px;
+    }
+    &-more__settins{
+        border: 2px solid #FFFFFF;
+        border-radius: 65px;
+        margin-right: 31px;
+        color: #FFFFFF;   
+        &:hover{
+            background: #FFFFFF;
+            border: 2px solid #272727;
+            color: #272727;
+            transition: all .4s;    
+        }     
+    }
+    &-more__logout{
+        background: #FFFFFF;
+        border: 2px solid #272727;
+        border-radius: 65px;
+        color: #272727;
+        &:hover{
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;   
+            background-color: transparent;
+            transition: all .4s;    
+        }
+    }
+    &-more__logout,
+    &-more__settins{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 15px;
+        width: 117px;
+        height: 30px;
+        text-align: center;
+        line-height: 31px;
+    }
+    &-contact{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: #908E90;
+        display: block;
+        text-decoration: underline;
+        margin-bottom: 7px;
+    }
+    &-info{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: #908E90;     
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+// section actions end
+// PAGE PAGE-TWO.HTML END
+
+// PAGE PAGE-THREE.HTML START
+.test{
+    &-functional{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 19px;
+        margin-bottom: 21px;
+        &__back-logo{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &-functional__back{
+        margin-right: 8px;
+    }
+    &-functional__name{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+    &-functional__inner{
+        display: flex;
+        align-items: center;
+    }
+    &-functional__btn{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 7.5px;
+        padding: 12px 9px 11px;
+        text-align: center;
+        color: #272727;        
+        background: #908E90;
+        border-radius: 65px;
+    }
+    &-functional__button{
+        margin-left: 9px;
+        &-pic{
+            width: 29px;
+            height: 29px;
+        }
+    }
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-scale{
+
+    }
+    &-scale__title{
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 7.5px;
+        line-height: 9px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    &-scale__box{
+        background: transparent;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        width: 78px;
+        height: 201px;
+        &-top{
+            background: #908E90;
+            border: 1px solid #FFFFFF;
+            border-right: none;
+            border-left: none;
+        }
+        &-bottom{
+            background: #908E90;
+            border: 1px solid #FFFFFF;
+            border-right: none;
+            border-left: none;
+        }
+        &-count{
+            font-family: $roboto-font;
+            font-weight: 500;
+            font-size: 7.5px;
+            line-height: 9px;
+            text-align: center;
+            color: #272727;
+            background: #FFFFFF;
+            border-radius: 65px;
+        }
+    }
+}
+
+// PAGE PAGE-THREE.HTML END
+
+@import "media";
+
